@@ -1,0 +1,9 @@
+function onKeyPress(inputObject, gameProcessedEvent)
+if inputObject.KeyCode == Enum.KeyCode.Q then
+    local A_1 = CFrame.new(game.Players.LocalPlayer.Character.Torso.Position)
+local Event = game:GetService("ReplicatedStorage").Remotes.DigEvent
+Event:FireServer(A_1)
+   end
+end
+
+game:GetService("UserInputService").InputBegan:connect(onKeyPress)
